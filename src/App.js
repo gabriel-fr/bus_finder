@@ -5,8 +5,8 @@ import Table from "./components/table";
 
 function App() {
   return (
-    <div style={{ display: 'flex' }}>
-      <Search />
+    <div >
+      {/* <Search /> */}
       <Table />
     </div>
   );
