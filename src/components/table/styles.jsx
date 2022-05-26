@@ -10,7 +10,7 @@ export const TableContainer = styled.div`
 `;
 
 export const SearchContainer = styled.div`
-    width: 40%;
+    width: 30%;
     background-color: white;
     height: 100vh;
 `

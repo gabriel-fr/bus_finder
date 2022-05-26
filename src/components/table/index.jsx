@@ -13,8 +13,8 @@ import TextField from '@mui/material/TextField';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.black,
-    color: theme.palette.common.white,
+    backgroundColor: '#3e3957',
+    color: '#f6f6ea',
   },
   [`&.${tableCellClasses.body}`]: {
     fontSize: 14,
@@ -23,7 +23,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
   '&:nth-of-type(odd)': {
-    backgroundColor: theme.palette.action.hover,
+    backgroundColor: '#f8f8f8',
   },
   // hide last border
   '&:last-child td, &:last-child th': {
@@ -38,14 +38,6 @@ export default function CustomizedTables() {
   function createData(name, horario, linha, dia) {
     return { name, horario, linha, dia };
   }
-  
-  // const rows = [
-  //   createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  //   createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  //   createData('Eclair', 262, 16.0, 24, 6.0),
-  //   createData('Cupcake', 305, 3.7, 67, 4.3),
-  //   createData('Gingerbread', 356, 16.0, 49, 3.9),
-  // ];
 
   const fetchData = async () => {
     try {
@@ -57,6 +49,7 @@ export default function CustomizedTables() {
       console.log(e);
     }
   }
+
   const rows = [];
   responseData.map(e => {
       rows.push(createData(e.linha.trim(), e.horario_largada, e.linha.trim(), e.tipo_dia));
